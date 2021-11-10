@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
 
+
+  imageLink: string = "./assets/images/IMG_E2038.JPG";
+
   constructor() { }
 
   ngOnInit(): void {
