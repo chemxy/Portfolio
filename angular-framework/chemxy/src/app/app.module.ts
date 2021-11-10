@@ -5,12 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './component/footer/footer.component';
 import { SummaryComponent } from './component/main-content/summary/summary.component';
 import { ResumeComponent } from './component/main-content/resume/resume.component';
 import { ProjectsComponent } from './component/main-content/projects/projects.component';
 import { ContactComponent } from './component/main-content/contact/contact.component';
 import { PageNotFoundComponent } from './component/main-content/page-not-found/page-not-found.component';
+import { JobComponent } from './component/main-content/resume/job/job.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { PageNotFoundComponent } from './component/main-content/page-not-found/p
     ResumeComponent,
     ProjectsComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    JobComponent,
+    
   ],
   imports: [
     BrowserModule,
