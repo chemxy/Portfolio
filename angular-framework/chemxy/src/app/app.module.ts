@@ -12,6 +12,8 @@ import { ProjectsComponent } from './component/main-content/projects/projects.co
 import { ContactComponent } from './component/main-content/contact/contact.component';
 import { PageNotFoundComponent } from './component/main-content/page-not-found/page-not-found.component';
 import { JobComponent } from './component/main-content/resume/job/job.component';
+import { AboutMeComponent } from './component/main-content/summary/about-me/about-me.component';
+import { TechStacksComponent } from './component/main-content/summary/tech-stacks/tech-stacks.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { JobComponent } from './component/main-content/resume/job/job.component'
     ContactComponent,
     PageNotFoundComponent,
     JobComponent,
+    AboutMeComponent,
+    TechStacksComponent,
     
   ],
   imports: [
