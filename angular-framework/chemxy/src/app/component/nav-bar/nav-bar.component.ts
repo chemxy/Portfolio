@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private router:Router, private route: ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
