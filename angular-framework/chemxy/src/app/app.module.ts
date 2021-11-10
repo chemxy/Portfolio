@@ -10,6 +10,7 @@ import { SummaryComponent } from './component/main-content/summary/summary.compo
 import { ResumeComponent } from './component/main-content/resume/resume.component';
 import { ProjectsComponent } from './component/main-content/projects/projects.component';
 import { ContactComponent } from './component/main-content/contact/contact.component';
+import { ExitComponent } from './component/main-content/exit/exit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactComponent } from './component/main-content/contact/contact.compo
     SummaryComponent,
     ResumeComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    ExitComponent
   ],
   imports: [
     BrowserModule,
