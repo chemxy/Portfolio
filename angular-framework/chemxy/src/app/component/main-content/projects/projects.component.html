@@ -1,4 +1,4 @@
-<p>projects works!</p>
-<app-project></app-project>
-<app-project></app-project>
-<app-project></app-project>
+<div class="container heading-1">
+    <h1 class="text-uppercase">Project Experience</h1>
+</div>
+<app-project *ngFor="let projectElement of projects" [project]="projectElement"></app-project>

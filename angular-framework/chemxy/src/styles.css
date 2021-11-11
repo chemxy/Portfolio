@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+.block-1 {
+    background-color: white;
+    margin-bottom: 2rem;
+    padding: 3rem
+}
+
+.heading-1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
