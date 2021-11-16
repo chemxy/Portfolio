@@ -2,17 +2,17 @@
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="form-group">
             <label for="validationDefault01">First name</label>
-            <input type="text" class="form-control" id="first-name" placeholder="First name" name="first-name" ngModel>
+            <input type="text" class="form-control" id="first-name" placeholder="First name" name="first-name" ngModel required>
         </div>
 
         <div class="form-group">
             <label for="validationDefault02">Last name</label>
-            <input type="text" class="form-control" id="last-name" placeholder="Last name" name="last-name" ngModel>
+            <input type="text" class="form-control" id="last-name" placeholder="Last name" name="last-name" ngModel required>
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-address" placeholder="Enter your email" name="email-address" ngModel>
+            <input type="email" class="form-control" id="email-address" placeholder="Enter your email" name="email-address" ngModel required email>
         </div>
 
         <div class="form-group ">
