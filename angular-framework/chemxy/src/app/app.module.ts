@@ -15,6 +15,7 @@ import { JobComponent } from './component/main-content/resume/job/job.component'
 import { AboutMeComponent } from './component/main-content/summary/about-me/about-me.component';
 import { TechStacksComponent } from './component/main-content/summary/tech-stacks/tech-stacks.component';
 import { ProjectComponent } from './component/main-content/projects/project/project.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ProjectComponent } from './component/main-content/projects/project/proj
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
