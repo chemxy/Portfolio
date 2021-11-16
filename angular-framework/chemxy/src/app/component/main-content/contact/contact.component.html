@@ -1,5 +1,5 @@
 <div id="contact-form" class="container mt-5" style="margin-bottom: 9rem;">
-    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <form id="contact-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="form-group">
             <label for="validationDefault01">First name</label>
             <input type="text" class="form-control" id="first-name" placeholder="First name" name="first-name" ngModel required>
@@ -31,7 +31,7 @@
         </div> -->
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button id="submit-contact-form" type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
         </div>
     </form>
 </div>
