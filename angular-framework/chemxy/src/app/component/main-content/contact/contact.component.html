@@ -1,28 +1,28 @@
 <div id="contact-form" class="container mt-5" style="margin-bottom: 9rem;">
-    <form>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="form-group">
             <label for="validationDefault01">First name</label>
-            <input type="text" class="form-control" id="first-name" placeholder="First name">
+            <input type="text" class="form-control" id="first-name" placeholder="First name" name="first-name" ngModel>
         </div>
 
         <div class="form-group">
             <label for="validationDefault02">Last name</label>
-            <input type="text" class="form-control" id="last-name" placeholder="Last name">
+            <input type="text" class="form-control" id="last-name" placeholder="Last name" name="last-name" ngModel>
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-address" placeholder="Enter your email">
+            <input type="email" class="form-control" id="email-address" placeholder="Enter your email" name="email-address" ngModel>
         </div>
 
         <div class="form-group ">
             <label for="email-title">Email title</label>
-            <input type="text" class="form-control" id="email-title" placeholder="Enter the tile for your email">
+            <input type="text" class="form-control" id="email-title" placeholder="Enter the tile for your email" name="email-title" ngModel>
         </div>
 
         <div class="form-group">
             <label for="email-content">Content</label>
-            <textarea class="form-control" id="email-content" placeholder="Write contents here for your email"></textarea>
+            <textarea class="form-control" id="email-content" placeholder="Write contents here for your email" name="email-content" ngModel></textarea>
         </div>
 
         <div class="form-group">
