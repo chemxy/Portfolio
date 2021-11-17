@@ -8,6 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
+  genders = ["male", "female", "unknown"];
+
   constructor() { }
 
   ngOnInit(): void {
