@@ -1,26 +1,39 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/">ROGER</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/">Summary</a>
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/resume">Resume</a>
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/projects">Projects</a>
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/contact">Contact</a>
-                </li>
-            </ul>
+<mat-toolbar>
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'; else elseBlock" (click)="sidenav.toggle()">
+        <mat-icon>
+            menu
+        </mat-icon>
+    </button>
+    <ng-template #elseBlock>
+        <a mat-button [routerLink]="'/'" routerLinkActive="active" class="text-captalize"> Summary </a>
+        <a mat-button [routerLink]="'/resume'" routerLinkActive="active" class="text-captalize"> Resume </a>
+        <a mat-button [routerLink]="'/projects'" routerLinkActive="active" class="text-captalize"> Projects </a>
+        <a mat-button [routerLink]="'/contact'" routerLinkActive="active" class="text-captalize"> Contact </a>
+    </ng-template>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+
+    <mat-sidenav #sidenav="matSidenav">
+        <div>
+            <a mat-button [routerLink]="'/'" routerLinkActive="active" class="text-captalize"> Summary </a>
+        </div>
+        <div>
+            <a mat-button [routerLink]="'/resume'" routerLinkActive="active" class="text-captalize"> Resume </a>
+        </div>
+        <div>
+            <a mat-button [routerLink]="'/projects'" routerLinkActive="active" class="text-captalize"> Projects </a>
+        </div>
+        <div>
+            <a mat-button [routerLink]="'/contact'" routerLinkActive="active" class="text-captalize"> Contact </a>
 
         </div>
-    </div>
-</nav>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div id="content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
