@@ -34,4 +34,7 @@ export class NavBarComponent implements OnInit {
     });
   }
 
+  toggleSideNav() {
+    this.sidenav.toggle();
+  }
 }
