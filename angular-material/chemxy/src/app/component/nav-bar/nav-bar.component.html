@@ -1,10 +1,10 @@
 <mat-toolbar>
-    <button mat-icon-button *ngIf="sidenav.mode === 'over'; else elseBlock" (click)="sidenav.toggle()">
+    <button mat-icon-button *ngIf="tabletMode; else pcMode" (click)="sidenav.toggle()">
         <mat-icon>
             menu
         </mat-icon>
     </button>
-    <ng-template #elseBlock>
+    <ng-template #pcMode>
         <a mat-button [routerLink]="'/'" routerLinkActive="active" class="text-captalize"> Summary </a>
         <a mat-button [routerLink]="'/resume'" routerLinkActive="active" class="text-captalize"> Resume </a>
         <a mat-button [routerLink]="'/projects'" routerLinkActive="active" class="text-captalize"> Projects </a>

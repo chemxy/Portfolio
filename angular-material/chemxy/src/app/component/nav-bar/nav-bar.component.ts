@@ -12,20 +12,24 @@ export class NavBarComponent implements OnInit {
   @ViewChild('sidenav')
   sidenav!: MatSidenav;
 
+  tabletMode!: boolean;
+
   constructor(private observer: BreakpointObserver) { }
 
   ngOnInit(): void {
-
+    this.tabletMode = false;
   }
 
   ngAfterViewInit() {
-    this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
+    this.observer.observe(['(max-width: 768px)']).subscribe((res) => {
       if (res.matches) {
         this.sidenav.mode = 'over';
         this.sidenav.close();
+        this.tabletMode = true;
       } else {
         this.sidenav.mode = 'side';
         this.sidenav.close();
+        this.tabletMode = false;
       }
     });
   }
