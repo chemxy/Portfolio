@@ -2,10 +2,13 @@
 
 <!-- page header and title -->
 <app-header></app-header>
+
+<!-- nav bar -->
 <app-nav-bar [sideNavReference]="sidenav"></app-nav-bar>
 
+<!-- side bar and main content -->
 <mat-sidenav-container>
-
+  <!-- toggleable side bar -->
   <mat-sidenav #sidenav id="sidenav-content">
     <div>
       <a mat-button [routerLink]="'/'" routerLinkActive="active" class="text-captalize"> Summary </a>
@@ -21,6 +24,7 @@
     </div>
   </mat-sidenav>
 
+  <!-- main content -->
   <mat-sidenav-content>
     <div id="main-content">
       <router-outlet></router-outlet>
