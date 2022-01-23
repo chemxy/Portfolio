@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 
@@ -9,8 +9,8 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class NavBarComponent implements OnInit {
 
-  @ViewChild('sidenav')
-  sidenav!: MatSidenav;
+  @Input('sideNavReference')
+  sidenavRef!: MatSidenav;
 
   tabletMode!: boolean;
 
@@ -23,18 +23,18 @@ export class NavBarComponent implements OnInit {
   ngAfterViewInit() {
     this.observer.observe(['(max-width: 768px)']).subscribe((res) => {
       if (res.matches) {
-        this.sidenav.mode = 'over';
-        this.sidenav.close();
+        this.sidenavRef.mode = 'over';
+        this.sidenavRef.close();
         this.tabletMode = true;
       } else {
-        this.sidenav.mode = 'side';
-        this.sidenav.close();
+        this.sidenavRef.mode = 'side';
+        this.sidenavRef.close();
         this.tabletMode = false;
       }
     });
   }
 
   toggleSideNav() {
-    this.sidenav.toggle();
+    this.sidenavRef.toggle();
   }
 }
