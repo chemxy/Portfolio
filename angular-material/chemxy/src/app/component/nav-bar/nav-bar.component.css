@@ -28,7 +28,3 @@ mat-sidenav {
     color: black;
     background-color: burlywood;
 }
-
-mat-sidenav-container {
-    /* height: calc(100vh - 65px); */
-}

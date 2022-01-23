@@ -9,15 +9,13 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class NavBarComponent implements OnInit {
 
-  @ViewChild(MatSidenav)
+  @ViewChild('sidenav')
   sidenav!: MatSidenav;
-
-  smallWindowSize: boolean = (window.innerWidth < 720) ? true : false;
 
   constructor(private observer: BreakpointObserver) { }
 
   ngOnInit(): void {
-    this.smallWindowSize = (window.innerWidth < 720) ? true : false;
+
   }
 
   ngAfterViewInit() {
@@ -32,7 +30,4 @@ export class NavBarComponent implements OnInit {
     });
   }
 
-  onResize(event: any): void {
-    this.smallWindowSize = (event.target.innerWidth <= 720) ? true : false;
-  }
 }
