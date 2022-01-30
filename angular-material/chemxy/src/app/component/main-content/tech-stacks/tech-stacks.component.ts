@@ -17,7 +17,8 @@ export class TechStacksComponent implements OnInit {
   languageChips = ['Java', 'Python', 'C', 'JavaScript', 'TypeScript',];
 
   devOpsChips = ['Jakarta EE', 'Eclipse', 'intelliJ', 'Miro', 'JIRA',
-    'Jenkins', 'npm', 'maven', 'subversion', 'Github', 'MS Teams', 'postman', 'Agile Development practice', 'Virtual Machines'];
+    'Jenkins', 'npm', 'maven', 'subversion', 'Github', 'MS Teams', 'postman',
+    'Agile Development practice', 'Virtual Machines'];
 
   testingChips = ['JUnit', 'Jest', 'Selenium', 'Cucumber', 'testNG'];
 
