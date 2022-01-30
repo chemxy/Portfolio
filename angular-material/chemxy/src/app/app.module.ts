@@ -31,6 +31,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { MatChipsModule } from '@angular/material/chips';
     MatListModule,
     MatExpansionModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    FontAwesomeModule
   ],
   providers: [
   ],
