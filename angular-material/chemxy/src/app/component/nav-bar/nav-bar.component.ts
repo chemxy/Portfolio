@@ -21,7 +21,7 @@ export class NavBarComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.observer.observe(['(max-width: 768px)']).subscribe((res) => {
+    this.observer.observe(['(max-width: 600px)']).subscribe((res) => {
       if (res.matches) {
         this.sidenavRef.mode = 'over';
         this.sidenavRef.close();

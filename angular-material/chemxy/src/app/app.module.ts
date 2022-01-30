@@ -68,7 +68,8 @@ import { MatChipsModule } from '@angular/material/chips';
     MatCardModule,
     MatChipsModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
