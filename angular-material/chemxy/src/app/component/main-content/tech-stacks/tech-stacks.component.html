@@ -1,20 +1,62 @@
-<mat-card class="float-block" id="tech-stacks" fxLayout="column" fxLayoutAlign="start start">
-    <h2 class="text-uppercase"> technical skills</h2>
+<div id="skills-title">
+    <h1 class="text-uppercase"> technical skills</h1>
+</div>
 
-    <br>
-
-    <div class="skill">
-        <h5><b>Web & Database technologies:</b></h5>
-        <p>AngularJS, JavaScript, Bootstrap 4, HTML/CSS, NodeJS, ExpressJS, SQL and Mongodb.</p>
+<mat-card class="skills-container">
+    <!-- TODO add color to each mat-chip -->
+    <div class="skill-set">
+        <h2 class="text-capitalize">Web technologies</h2>
+        <mat-chip-list id="web-chip-set">
+            <mat-chip class="text-capitalize" *ngFor="let webChip of webChips">{{webChip}}</mat-chip>
+        </mat-chip-list>
     </div>
-
-    <div class="skill">
-        <h5><b>Programming Languages:</b></h5>
-        <p>Python, Java, C and C++.</p>
+</mat-card>
+<mat-card class="skills-container">
+    <div class="skill-set">
+        <h2 class="text-capitalize">database</h2>
+        <mat-chip-list id="db-chip-set">
+            <mat-chip class="text-capitalize" *ngFor="let dbChip of dbChips">{{dbChip}}</mat-chip>
+        </mat-chip-list>
     </div>
-
-    <div class="skill">
-        <h5><b>Development Tools:</b></h5>
-        <p>Github, MS Office Suite, Matlab, InVision, Adobe XD and Virtual Machines. </p>
+</mat-card>
+<mat-card class="skills-container">
+    <div class="skill-set">
+        <h2 class="text-capitalize">programming languages</h2>
+        <mat-chip-list id="programming-chip-set">
+            <mat-chip class="text-capitalize" *ngFor="let languageChip of languageChips">{{languageChip}}</mat-chip>
+        </mat-chip-list>
+    </div>
+</mat-card>
+<mat-card class="skills-container">
+    <div class="skill-set">
+        <h2 class="text-capitalize">DevOps</h2>
+        <mat-chip-list id="devops-chip-set">
+            <mat-chip class="text-capitalize" *ngFor="let devOpsChip of devOpsChips">{{devOpsChip}}</mat-chip>
+        </mat-chip-list>
+    </div>
+</mat-card>
+<mat-card class="skills-container">
+    <div class="skill-set">
+        <h2 class="text-capitalize">data science</h2>
+        <mat-chip-list id="data-chip-set">
+            <mat-chip class="text-capitalize" *ngFor="let dataScienceChip of dataScienceChips">{{dataScienceChip}}
+            </mat-chip>
+        </mat-chip-list>
+    </div>
+</mat-card>
+<mat-card class="skills-container">
+    <div class="skill-set">
+        <h2 class="text-capitalize">testing</h2>
+        <mat-chip-list id="testing-chip-set">
+            <mat-chip class="text-capitalize" *ngFor="let testingChip of testingChips">{{testingChip}}</mat-chip>
+        </mat-chip-list>
+    </div>
+</mat-card>
+<mat-card class="skills-container">
+    <div class="skill-set">
+        <h2 class="text-capitalize">UI Design</h2>
+        <mat-chip-list id="ui-chip-set">
+            <mat-chip class="text-capitalize" *ngFor="let uiChip of uiChips">{{uiChip}}</mat-chip>
+        </mat-chip-list>
     </div>
 </mat-card>

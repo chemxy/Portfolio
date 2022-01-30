@@ -12,14 +12,19 @@ body {
 
 .text-center {
     text-align: center;
+    justify-content: center;
 }
 
 .text-uppercase {
     text-transform: uppercase;
 }
 
-.text-captalize {
+.text-capitalize {
     text-transform: capitalize;
+}
+
+.text-bold {
+    font-weight: bold;
 }
 
 .block-1 {
