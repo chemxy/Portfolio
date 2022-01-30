@@ -8,8 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class JobComponent implements OnInit {
 
   @Input()
-  job!: { title: string; company: string; location: string; duration: string; description: string; };
-
+  job!: {
+    title: string;
+    company: string;
+    location: string;
+    duration: string;
+    description: string;
+  };
 
   constructor() { }
 
