@@ -48,6 +48,18 @@ body {
     margin-left: auto;
 }
 
+.float-block-2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    width: 60%;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width: 1024px) {
     .float-block {
         width: 600px;
