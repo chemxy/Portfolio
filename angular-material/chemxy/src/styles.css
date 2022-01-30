@@ -34,8 +34,8 @@ body {
 }
 
 .heading-1 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 20px 0;
+    text-align: center !important;
 }
 
 .float-block {
