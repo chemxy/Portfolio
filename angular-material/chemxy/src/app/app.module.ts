@@ -12,8 +12,7 @@ import { ProjectsComponent } from './component/main-content/projects/projects.co
 import { ContactComponent } from './component/main-content/contact/contact.component';
 import { PageNotFoundComponent } from './component/main-content/page-not-found/page-not-found.component';
 import { JobComponent } from './component/main-content/resume/job/job.component';
-import { AboutMeComponent } from './component/main-content/summary/about-me/about-me.component';
-import { TechStacksComponent } from './component/main-content/summary/tech-stacks/tech-stacks.component';
+import { TechStacksComponent } from './component/main-content/tech-stacks/tech-stacks.component';
 import { ProjectComponent } from './component/main-content/projects/project/project.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -46,7 +45,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ContactComponent,
     PageNotFoundComponent,
     JobComponent,
-    AboutMeComponent,
     TechStacksComponent,
     ProjectComponent,
 

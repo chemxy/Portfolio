@@ -1,4 +1,4 @@
-<mat-toolbar id="navbar" fxLayoutAlign="center start">
+<mat-toolbar id="navbar" fxLayoutAlign="center start" fxLayoutAlign.lt-sm="start start">
     <button mat-icon-button *ngIf="tabletMode; else pcMode" (click)="toggleSideNav()">
         <mat-icon>
             menu
@@ -6,7 +6,8 @@
     </button>
     <ng-template #pcMode>
         <a mat-button [routerLink]="'/'" routerLinkActive="active" class="text-uppercase"> Summary </a>
-        <a mat-button [routerLink]="'/resume'" routerLinkActive="active" class="text-uppercase"> Resume </a>
+        <a mat-button [routerLink]="'/skills'" routerLinkActive="active" class="text-uppercase"> skills </a>
+        <a mat-button [routerLink]="'/resume'" routerLinkActive="active" class="text-uppercase"> career </a>
         <a mat-button [routerLink]="'/projects'" routerLinkActive="active" class="text-uppercase"> Projects </a>
         <a mat-button [routerLink]="'/contact'" routerLinkActive="active" class="text-uppercase"> Contact </a>
     </ng-template>

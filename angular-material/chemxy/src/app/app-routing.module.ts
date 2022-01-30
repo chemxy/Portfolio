@@ -5,10 +5,12 @@ import { PageNotFoundComponent } from './component/main-content/page-not-found/p
 import { ProjectsComponent } from './component/main-content/projects/projects.component';
 import { ResumeComponent } from './component/main-content/resume/resume.component';
 import { SummaryComponent } from './component/main-content/summary/summary.component';
+import { TechStacksComponent } from './component/main-content/tech-stacks/tech-stacks.component';
 
 const routes: Routes = [
   { path: "", component: SummaryComponent },
   { path: "summary", component: SummaryComponent },
+  { path: "skills", component: TechStacksComponent },
   { path: "resume", component: ResumeComponent },
   { path: "projects", component: ProjectsComponent },
   { path: "contact", component: ContactComponent },
