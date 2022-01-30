@@ -1,6 +1,12 @@
 #footer {
     /* padding: 100px 0; */
+    margin-top: 100px;
     background: #fafafa;
     /* border-radius: 10px; */
     padding-bottom: 25px;
+    /* display: inline-block !important; */
+}
+
+.footer-icon {
+    margin-left: 1rem;
 }
