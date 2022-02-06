@@ -30,6 +30,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -67,7 +70,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatExpansionModule,
     MatCardModule,
     MatChipsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule
   ],
   providers: [
   ],

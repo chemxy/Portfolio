@@ -1,4 +1,4 @@
-<div id="contact-form" class="container mt-5" style="margin-bottom: 9rem;">
+<mat-card id="contact-form">
     <form id="contact-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="form-group">
             <label for="validationDefault01">First name</label>
@@ -50,4 +50,4 @@
             <button id="submit-contact-form" type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
         </div>
     </form>
-</div>
+</mat-card>
