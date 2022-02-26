@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 
@@ -14,7 +14,7 @@ export class NavBarComponent implements OnInit {
 
   tabletMode!: boolean;
 
-  constructor(private observer: BreakpointObserver) { }
+  constructor (private observer: BreakpointObserver) { }
 
   ngOnInit(): void {
     this.tabletMode = false;
