@@ -6,5 +6,10 @@
 }
 
 .skill-set {
-    margin: 20px 0;
+    padding-top: 5px;
+    padding-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 40px;
 }
