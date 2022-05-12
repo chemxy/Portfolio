@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
 
-** TODO **
+** TODOs **
 
 1. change the words in the header based on the current page.
 2. add a link to download resume in pdf.
