@@ -8,9 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProjectComponent implements OnInit {
 
   @Input()
-  project!: { title: string, type: string, date: string, description: string };
+  project!: { title: string, githubLink: string, technologies: string[], type: string, startDate: string, endDate: string, description: string[] };
 
-  constructor() { }
+  constructor () { }
 
   ngOnInit(): void {
   }
