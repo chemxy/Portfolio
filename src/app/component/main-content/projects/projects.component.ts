@@ -57,8 +57,8 @@ export class ProjectsComponent implements OnInit {
     {
       title: "personal website",
       type: "personal project",
-      startDate: '2020',
-      endDate: "2021",
+      startDate: 'May 2020',
+      endDate: "Sep 2022",
       githubLink: '',
       technologies: ['typescript', 'html', 'css'],
       description:
@@ -71,8 +71,8 @@ export class ProjectsComponent implements OnInit {
     {
       title: "Game: Maze Runner",
       type: "personal project",
-      startDate: '2020',
-      endDate: "2020",
+      startDate: 'May 2020',
+      endDate: "Jun 2020",
       technologies: ['python'],
       githubLink: '',
       description: [
@@ -82,8 +82,8 @@ export class ProjectsComponent implements OnInit {
     {
       title: "Data Mining: A Predictor for Heart Disease",
       type: "Course project: SENG474",
-      startDate: '2019',
-      endDate: "2019",
+      startDate: 'Sep 2019',
+      endDate: "Dec 2019",
       technologies: ['python'],
       githubLink: '',
       description: [
@@ -93,8 +93,8 @@ export class ProjectsComponent implements OnInit {
     {
       title: "Requirements Engineering",
       type: "Course project: SENG321",
-      startDate: '2019',
-      endDate: "2019",
+      startDate: 'Sep 2019',
+      endDate: "Dec 2019",
       technologies: [],
       githubLink: '',
       description: [
@@ -104,8 +104,8 @@ export class ProjectsComponent implements OnInit {
     {
       title: "Software Architecture Analysis",
       type: "Course project: SENG480A",
-      startDate: '2019',
-      endDate: "2019",
+      startDate: 'Sep 2019',
+      endDate: "Dec 2019",
       technologies: [],
       githubLink: '',
       description: [

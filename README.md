@@ -6,9 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. change the words in the header based on the current page.
 2. add a link to download resume in pdf.
-3. update the descriptions in the summary page.
-4. update the descriptions in the  project experience page.
-5. implement functionality for the contact links.
+3. implement functionality for the contact links.
 5. if possible, make the navbar sticky to top or bottom.
 
 
