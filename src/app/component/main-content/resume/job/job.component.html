@@ -2,8 +2,10 @@
     <h3 class="text-capitalize">{{job.title}}</h3>
     <h5 class=" text-uppercase font-weight-normal font-italic">{{job.company}}</h5>
     <h5 class="text-capitalize font-weight-normal font-italic">{{job.location}}</h5>
-    <h6 class="font-weight-normal">{{job.duration}}</h6>
-    <p class="text-left">
-        {{job.description}}
-    </p>
+    <h6 class="font-weight-normal">{{job.startDate}} - {{job.endDate}}</h6>
+    <div>
+        <ul>
+            <li *ngFor="let item of job.description">{{item}}</li>
+        </ul>
+    </div>
 </mat-card>

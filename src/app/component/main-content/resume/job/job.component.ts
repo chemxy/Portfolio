@@ -12,11 +12,12 @@ export class JobComponent implements OnInit {
     title: string;
     company: string;
     location: string;
-    duration: string;
-    description: string;
+    startDate: string;
+    endDate: string;
+    description: string[];
   };
 
-  constructor() { }
+  constructor () { }
 
   ngOnInit(): void {
   }
