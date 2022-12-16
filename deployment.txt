@@ -1,1 +1,0 @@
-ng build --base-href "https://chemxy.github.io/personal-website/"
