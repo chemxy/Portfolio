@@ -1,0 +1,39 @@
+#navigation {
+    box-shadow: 0 1px 10px rgba(54, 54, 54, 0.18);
+    margin-bottom: 86px;
+    min-width: 200px;
+}
+
+#selfie {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 12px solid;
+    border-color: white;
+    box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13);
+    position: absolute;
+    top: -50%;
+}
+
+li.nav-item {
+    padding: 0 1rem;
+}
+
+#navbar-container {
+    max-width: 1100px;
+    padding: 12px 0;
+}
+
+#navbar-name-tag {
+    text-align: center;
+}
+
+.navbar-name-tag-1 {
+    font-size: 16px;
+}
+
+.navbar-name-tag-2 {
+    font-size: 14px;
+    font-weight: lighter;
+}

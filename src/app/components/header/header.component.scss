@@ -1,0 +1,23 @@
+#header {
+    height: 70vh;
+    background-color: whitesmoke;
+}
+
+#header-content {
+    top: 20%;
+    left: 5%;
+    position: absolute;
+}
+
+#header-content-name {
+    /* font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300))); */
+    font-size: 75px;
+    font-weight: bold;
+    /* font-family: 'Courier New', Courier, monospace; */
+    vertical-align: middle;
+    color: #111;
+}
+
+#header-content-title {
+    font-weight: lighter;
+}

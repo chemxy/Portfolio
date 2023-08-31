@@ -1,82 +1,38 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatCardModule } from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './component/header/header.component';
-import { NavBarComponent } from './component/nav-bar/nav-bar.component';
-import { FooterComponent } from './component/footer/footer.component';
-import { SummaryComponent } from './component/main-content/summary/summary.component';
-import { ResumeComponent } from './component/main-content/resume/resume.component';
-import { ProjectsComponent } from './component/main-content/projects/projects.component';
-import { ContactComponent } from './component/main-content/contact/contact.component';
-import { PageNotFoundComponent } from './component/main-content/page-not-found/page-not-found.component';
-import { JobComponent } from './component/main-content/resume/job/job.component';
-import { TechStacksComponent } from './component/main-content/tech-stacks/tech-stacks.component';
-import { ProjectComponent } from './component/main-content/projects/project/project.component';
-import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { FlexLayoutModule } from '@angular/flex-layout';
-
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatListModule } from '@angular/material/list';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatCardModule } from '@angular/material/card';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatRadioModule } from '@angular/material/radio';
-
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { EducationComponent } from './components/education/education.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { SummaryComponent } from './components/summary/summary.component';
+import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { HighlightsComponent } from './components/highlights/highlights.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    NavBarComponent,
-    FooterComponent,
     SummaryComponent,
-    ResumeComponent,
-    ProjectsComponent,
-    ContactComponent,
-    PageNotFoundComponent,
-    JobComponent,
-    TechStacksComponent,
-    ProjectComponent,
-
+    WorkExperienceComponent,
+    SkillsComponent,
+    EducationComponent,
+    HeaderComponent,
+    NavigationComponent,
+    HighlightsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
-    MatToolbarModule,
-    MatTabsModule,
-    MatSidenavModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatIconModule,
-    MatDividerModule,
-    MatListModule,
-    MatExpansionModule,
     MatCardModule,
-    MatChipsModule,
-    FontAwesomeModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatRadioModule
+    LayoutModule
   ],
-  providers: [
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,41 +1,23 @@
-<!-- <app-nav-bar></app-nav-bar> -->
+<div id="scroll-body" data-bs-spy="scroll" data-bs-target="#navigation" data-bs-smooth-scroll="true" tabindex="0">
+    <app-header id="navbarHeader"></app-header>
+    <app-navigation></app-navigation>
+    <app-highlights></app-highlights>
+    <div id="navbarSummary"
+        class="section container d-flex flex-column flex-md-row ms-auto me-auto justify-content-center">
+        <div class="row">
+            <div class="col-lg-4">
+                <app-summary></app-summary>
+            </div>
+            <div class="col-lg-4">
+                <app-education></app-education>
+            </div>
+            <div class="col-lg-4">
+                <app-work-experience></app-work-experience>
+            </div>
+        </div>
 
-<!-- page header and title -->
-<app-header></app-header>
-
-<!-- nav bar -->
-<app-nav-bar [sideNavReference]="sidenav"></app-nav-bar>
-
-<!-- side bar and main content -->
-<mat-sidenav-container>
-  <!-- toggleable side bar -->
-  <mat-sidenav #sidenav id="sidenav-content">
-    <div>
-      <a mat-button [routerLink]="'/'" routerLinkActive="active" class="text-captalize"> Summary </a>
-    </div>
-    <div>
-      <a mat-button [routerLink]="'/skills'" routerLinkActive="active" class="text-captalize"> skills </a>
-    </div>
-    <div>
-      <a mat-button [routerLink]="'/resume'" routerLinkActive="active" class="text-captalize"> Resume </a>
-    </div>
-    <div>
-      <a mat-button [routerLink]="'/projects'" routerLinkActive="active" class="text-captalize"> Projects </a>
-    </div>
-    <div>
-      <a mat-button [routerLink]="'/contact'" routerLinkActive="active" class="text-captalize"> Contact </a>
-    </div>
-  </mat-sidenav>
-
-  <!-- main content -->
-  <mat-sidenav-content>
-    <div id="main-content">
-      <router-outlet></router-outlet>
-      <app-footer></app-footer>
     </div>
 
-
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
-<!-- footer -->
+    <P style="height:2000px" id="navbarSkills"></P>
+    <P style="height:2000px" id="navbarServices"></P>
+</div>

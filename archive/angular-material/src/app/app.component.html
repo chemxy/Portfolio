@@ -1,0 +1,41 @@
+<!-- <app-nav-bar></app-nav-bar> -->
+
+<!-- page header and title -->
+<app-header></app-header>
+
+<!-- nav bar -->
+<app-nav-bar [sideNavReference]="sidenav"></app-nav-bar>
+
+<!-- side bar and main content -->
+<mat-sidenav-container>
+  <!-- toggleable side bar -->
+  <mat-sidenav #sidenav id="sidenav-content">
+    <div>
+      <a mat-button [routerLink]="'/'" routerLinkActive="active" class="text-captalize"> Summary </a>
+    </div>
+    <div>
+      <a mat-button [routerLink]="'/skills'" routerLinkActive="active" class="text-captalize"> skills </a>
+    </div>
+    <div>
+      <a mat-button [routerLink]="'/resume'" routerLinkActive="active" class="text-captalize"> Resume </a>
+    </div>
+    <div>
+      <a mat-button [routerLink]="'/projects'" routerLinkActive="active" class="text-captalize"> Projects </a>
+    </div>
+    <div>
+      <a mat-button [routerLink]="'/contact'" routerLinkActive="active" class="text-captalize"> Contact </a>
+    </div>
+  </mat-sidenav>
+
+  <!-- main content -->
+  <mat-sidenav-content>
+    <div id="main-content">
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+    </div>
+
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+<!-- footer -->
