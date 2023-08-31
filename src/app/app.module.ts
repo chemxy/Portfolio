@@ -14,6 +14,7 @@ import { SummaryComponent } from './components/summary/summary.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 import { HighlightsComponent } from './components/highlights/highlights.component';
 import {MatChipsModule} from '@angular/material/chips';
+import { ServicesComponent } from './components/services/services.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {MatChipsModule} from '@angular/material/chips';
     HeaderComponent,
     NavigationComponent,
     HighlightsComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,
