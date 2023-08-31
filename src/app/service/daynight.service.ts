@@ -18,6 +18,7 @@ export class DaynightService {
   }
 
   getTitle(): string {
-    return this.title ? this.webDevTitle : this.appDevTitle;;
+    return this.title ? this.webDevTitle : this.appDevTitle;
+    ;
   }
 }

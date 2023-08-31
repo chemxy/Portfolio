@@ -13,6 +13,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 import { HighlightsComponent } from './components/highlights/highlights.component';
+import {MatChipsModule} from '@angular/material/chips';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { HighlightsComponent } from './components/highlights/highlights.componen
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    LayoutModule
+    LayoutModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
