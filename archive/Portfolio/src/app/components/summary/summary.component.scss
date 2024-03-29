@@ -1,0 +1,9 @@
+#about-me-card {
+    max-width: 400px;
+}
+
+@media (max-width: 992px) {
+    #about-me-card {
+        max-width: 100%;
+    }
+}

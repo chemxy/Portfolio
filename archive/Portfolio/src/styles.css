@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+.active,
+a.active {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+mat-card,
+.mat-card {
+    border: 1px solid !important;
+    border-color: #ddd !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+.section-label {
+    font-size: 36px;
+    margin-top: 66px;
+    margin-bottom: 24px;
+}
+
+.section {
+    max-width: 60vw;
+    min-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .section {
+        max-width: 85vw;
+    }
+}
