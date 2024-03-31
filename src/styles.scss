@@ -1,42 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+//@import "~bootstrap-icons/font/bootstrap-icons.css";
+
 body {
   margin: 0;
+  //font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+//links and lists
 .active,
-a.active {
+.custom-link.active {
   font-weight: bold;
 }
 
-a {
+.custom-link {
   text-decoration: none;
+  color: black;
 }
 
-a:hover {
+.custom-link:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
-mat-card,
-.mat-card {
-  border: 1px solid !important;
-  border-color: #ddd !important;
-  border-radius: 8px !important;
-  box-shadow: none !important;
-}
-
-.section-label {
-  font-size: 36px;
-  margin-top: 66px;
-  margin-bottom: 24px;
-}
-
-.section {
-  max-width: 60vw;
-  min-width: 300px;
-}
-
-@media (max-width: 768px) {
-  .section {
-    max-width: 85vw;
-  }
+.link-item {
+  list-style-type: none;
 }

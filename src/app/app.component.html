@@ -1,27 +1,8 @@
-<div id="scroll-body" data-bs-spy="scroll" data-bs-target="#navigation" data-bs-smooth-scroll="true" tabindex="0">
-  <app-header id="navbarHeader"></app-header>
-  <app-navigation></app-navigation>
-  <app-highlights></app-highlights>
-  <div class="section container d-flex flex-column flex-md-row ms-auto me-auto justify-content-center"
-       id="navbarSummary">
-    <div class="col">
-      <div class="col-lg-4">
-        <app-summary></app-summary>
-      </div>
-      <div class="col-lg-4">
-        <app-education></app-education>
-      </div>
-      <div class="col-lg-4">
-        <app-work-experience></app-work-experience>
-      </div>
-    </div>
-
+<div class="flex-row">
+  <div id="navbar">
+    <app-navigation></app-navigation>
   </div>
-
-  <div class="section container d-flex justify-content-center" id="navbarSkills">
-    <app-skills></app-skills>
-  </div>
-  <div class="section container d-flex justify-content-center" id="navbarServices">
-    <app-services></app-services>
+  <div id="content">
+    <router-outlet></router-outlet>
   </div>
 </div>

@@ -16,7 +16,6 @@ import { HighlightsComponent } from './components/highlights/highlights.componen
 import {MatChipsModule} from '@angular/material/chips';
 import { ServicesComponent } from './components/services/services.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,14 +28,14 @@ import { ServicesComponent } from './components/services/services.component';
     HighlightsComponent,
     ServicesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    LayoutModule,
-    MatChipsModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        LayoutModule,
+        MatChipsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

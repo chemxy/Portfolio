@@ -18,28 +18,31 @@ import { ProjectComponent } from './component/main-content/projects/project/proj
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    NavBarComponent,
-    FooterComponent,
-    SummaryComponent,
-    ResumeComponent,
-    ProjectsComponent,
-    ContactComponent,
-    PageNotFoundComponent,
-    JobComponent,
-    AboutMeComponent,
-    TechStacksComponent,
-    ProjectComponent,
-    
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        NavBarComponent,
+        FooterComponent,
+        SummaryComponent,
+        ResumeComponent,
+        ProjectsComponent,
+        ContactComponent,
+        PageNotFoundComponent,
+        JobComponent,
+        AboutMeComponent,
+        TechStacksComponent,
+        ProjectComponent,
+
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
+    providers: [],
+    exports: [
+        NavBarComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

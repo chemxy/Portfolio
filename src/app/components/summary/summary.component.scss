@@ -1,9 +1,24 @@
-#about-me-card {
-    max-width: 400px;
+img {
+  height: 220px;
+  width: 220px;
+  border-radius: 66px;
 }
 
-@media (max-width: 992px) {
-    #about-me-card {
-        max-width: 100%;
-    }
+.summary-container {
+  position: relative;
+  top: 32%;
+  max-width: 70%;
+  font-family: "Montserrat", sans-serif;
 }
+
+.description {
+  color: #767676;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.name-tag {
+  font-weight: 800;
+  font-size: 48px;
+}
+
