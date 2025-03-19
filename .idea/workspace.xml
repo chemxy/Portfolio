@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ddc77530-cff0-4fc1-95e1-b5decf14e99d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/app.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/education/education.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/education/education.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/education/education.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/education/education.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/header/header.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/header/header.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/highlights/highlights.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/highlights/highlights.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/highlights/highlights.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/highlights/highlights.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/navigation/navigation.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/navigation/navigation.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/navigation/navigation.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/navigation/navigation.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/services/services.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/services/services.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/services/services.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/services/services.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/skills/skills.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/skills/skills.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/skills/skills.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/skills/skills.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/summary/summary.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/summary/summary.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/summary/summary.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/summary/summary.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/work-experience/work-experience.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/work-experience/work-experience.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/work-experience/work-experience.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/components/work-experience/work-experience.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/service/daynight.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/app/service/daynight.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/assets/IMG_1033.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/custom-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/src/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/Portfolio/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/footer/footer.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/footer/footer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/footer/footer.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/footer/footer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/header/header.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/header/header.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/contact/contact.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/contact/contact.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/contact/contact.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/contact/contact.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/page-not-found/page-not-found.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/page-not-found/page-not-found.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/page-not-found/page-not-found.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/page-not-found/page-not-found.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/projects/project/project.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/projects/project/project.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/projects/project/project.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/projects/project/project.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/projects/projects.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/projects/projects.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/projects/projects.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/projects/projects.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/resume/job/job.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/resume/job/job.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/resume/job/job.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/resume/job/job.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/resume/resume.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/resume/resume.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/resume/resume.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/resume/resume.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/about-me/about-me.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/about-me/about-me.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/about-me/about-me.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/about-me/about-me.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/summary.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/summary.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/summary.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/summary.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/tech-stacks/tech-stacks.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/tech-stacks/tech-stacks.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/tech-stacks/tech-stacks.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/main-content/summary/tech-stacks/tech-stacks.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/nav-bar/nav-bar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/nav-bar/nav-bar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/nav-bar/nav-bar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/component/nav-bar/nav-bar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/app/model/images.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/assets/images/IMG_E2038.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/assets/images/IMG_E2047.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/assets/images/github-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/assets/images/gmail-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/assets/images/linkedin-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/assets/images/mobile-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-bootstrap/chemxy/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/assets/images/IMG_1033.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/assets/images/IMG_E2038.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/assets/images/IMG_E2047.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/assets/images/github-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/assets/images/gmail-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/assets/images/linkedin-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/assets/images/mobile-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/main.2d2a132e674223c1e42a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/polyfills.3572f085f9b7f65c9760.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/runtime.64c3fc1a2f3b0e45a078.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/docs/styles.785e1c354e6c80e63e12.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/footer/footer.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/footer/footer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/footer/footer.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/footer/footer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/header/header.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/header/header.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/contact/contact.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/contact/contact.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/contact/contact.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/contact/contact.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/page-not-found/page-not-found.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/page-not-found/page-not-found.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/page-not-found/page-not-found.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/page-not-found/page-not-found.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/projects/project/project.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/projects/project/project.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/projects/project/project.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/projects/project/project.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/projects/projects.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/projects/projects.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/projects/projects.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/projects/projects.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/resume/job/job.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/resume/job/job.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/resume/job/job.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/resume/job/job.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/resume/resume.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/resume/resume.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/resume/resume.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/resume/resume.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/summary/summary.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/summary/summary.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/summary/summary.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/summary/summary.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/tech-stacks/tech-stacks.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/tech-stacks/tech-stacks.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/tech-stacks/tech-stacks.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/main-content/tech-stacks/tech-stacks.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/nav-bar/nav-bar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/nav-bar/nav-bar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/nav-bar/nav-bar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/component/nav-bar/nav-bar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/app/model/images.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/assets/images/IMG_1033.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/assets/images/IMG_E2038.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/assets/images/IMG_E2047.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/assets/images/github-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/assets/images/gmail-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/assets/images/linkedin-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/assets/images/mobile-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/custom-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/angular-material/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/images/IMG_E2038.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/images/IMG_E2047.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/images/github-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/images/gmail-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/images/linkedin-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/images/mobile-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/public/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/public/debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/public/projects.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/public/resume.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/routes/contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/routes/projects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/routes/resume.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/express-framework/server/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/heading.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/images/img1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/images/img2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/navigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/projects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/projects.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/resume.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/components/selfie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/react-framework/client/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/education/education.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/education/education.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/education/education.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/education/education.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/highlights/highlights.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/highlights/highlights.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/highlights/highlights.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/highlights/highlights.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/navigation/navigation.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/navigation/navigation.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/navigation/navigation.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/navigation/navigation.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/services/services.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/services/services.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/services/services.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/services/services.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/skills/skills.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/skills/skills.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/skills/skills.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/skills/skills.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/summary/summary.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/summary/summary.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/summary/summary.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/summary/summary.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/work-experience/work-experience.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/work-experience/work-experience.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/work-experience/work-experience.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/work-experience/work-experience.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/daynight.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/daynight.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/IMG_1033.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img-1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bootstrap-custom.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.spec.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2uWQCxLjnW7XPWOWlzoltIUpRfZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/chemac/Dev/github/Portfolio&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ddc77530-cff0-4fc1-95e1-b5decf14e99d" name="Changes" comment="" />
+      <created>1742361727350</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742361727350</updated>
+      <workItem from="1742361728746" duration="1039000" />
+      <workItem from="1742362797961" duration="617000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
