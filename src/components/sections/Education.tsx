@@ -19,23 +19,22 @@ import SchoolIcon from '@mui/icons-material/School';
 
 const educationData = [
   {
-    year: '2018 - 2022',
-    degree: 'Bachelor of Science in Computer Science',
-    school: 'University Name',
-    description: 'Graduated with honors, specialized in Software Engineering'
+    year: '2016 - 2022',
+    degree: 'Bachelor of Software Engineering ',
+    school: 'University of Victoria',
+    description: ''
   },
   {
-    year: '2016 - 2018',
-    degree: 'Associate Degree in Programming',
-    school: 'College Name',
-    description: 'Foundation in programming fundamentals'
-  },
-  // Add more education items as needed
+    year: '2012 - 2015',
+    degree: 'High School',
+    school: 'China',
+    description: ''
+  }
 ];
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 bg-white">
+    <section id="education" className="py-20 bg-white ">
       <Container maxWidth="lg">
         <Typography 
           variant="h2" 
