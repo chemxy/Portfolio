@@ -1,5 +1,3 @@
-'use client';
-
 import { Container, Typography, Grid, Paper } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
 import DevicesIcon from '@mui/icons-material/Devices';

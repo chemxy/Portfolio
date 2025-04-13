@@ -7,19 +7,19 @@ import Experience from "@/components/Experience";
 import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <main className="w-full">
-        <Hero />
-        <About />
-        <Education />
-        <Skills />
-        <Experience />
-        <Portfolio />
-        <Contact />
-      </main>
-    </>
-  );
+export default async function Home() {
+    return (
+        <>
+            <Navbar/>
+            <main className="w-full">
+                <Hero/>
+                <About/>
+                <Education/>
+                <Skills/>
+                <Experience/>
+                <Portfolio/>
+                <Contact/>
+            </main>
+        </>
+    );
 }

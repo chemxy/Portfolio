@@ -1,4 +1,3 @@
-'use client';
 
 import { Container, Typography, Grid, LinearProgress, Box } from '@mui/material';
 

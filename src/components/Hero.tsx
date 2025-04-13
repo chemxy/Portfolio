@@ -1,4 +1,3 @@
-'use client';
 
 import { Container, Typography, Box, Button } from '@mui/material';
 import Image from 'next/image';
@@ -30,7 +29,7 @@ export default function Hero() {
             variant="h1" 
             className="text-5xl md:text-6xl font-bold mb-4 animate-slideIn"
           >
-            Your Name
+            Roger
           </Typography>
           
           <Typography 
@@ -44,7 +43,7 @@ export default function Hero() {
             <Button
               variant="contained"
               startIcon={<GitHubIcon />}
-              href="https://github.com/yourusername"
+              href="https://github.com/chemxy"
               target="_blank"
               className="bg-primary hover:bg-primary-dark"
             >
@@ -53,7 +52,7 @@ export default function Hero() {
             <Button
               variant="outlined"
               startIcon={<LinkedInIcon />}
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/chemxy"
               target="_blank"
               className="border-white text-white hover:bg-white/10"
             >

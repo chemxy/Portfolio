@@ -1,4 +1,3 @@
-'use client';
 
 import { Container, Typography, Grid, Card, CardContent, CardMedia, CardActions, Button } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';

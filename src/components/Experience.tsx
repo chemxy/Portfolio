@@ -1,4 +1,3 @@
-'use client';
 
 import { Container, Typography,  } from '@mui/material';
 import WorkIcon from '@mui/icons-material/Work';
