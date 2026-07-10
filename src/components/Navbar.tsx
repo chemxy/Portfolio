@@ -22,6 +22,7 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 50);
     };
 
+    handleScroll(); // sync with restored scroll position on load/refresh
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
