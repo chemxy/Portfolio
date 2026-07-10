@@ -16,7 +16,7 @@ export default function Hero() {
         <Box className="text-center text-white animate-fadeIn">
           <div className="mb-8 inline-block rounded-full overflow-hidden border-4 border-white/30">
             <Image
-              src="/images/profile.jpg"
+              src="/images/pro2.png"
               alt="Profile"
               width={180}
               height={180}
@@ -29,7 +29,7 @@ export default function Hero() {
             variant="h1" 
             className="text-5xl md:text-6xl font-bold mb-4 animate-slideIn"
           >
-            Roger
+            Xingyun Chen
           </Typography>
           
           <Typography 

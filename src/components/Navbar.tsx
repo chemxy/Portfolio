@@ -48,7 +48,7 @@ export default function Navbar() {
                 isScrolled ? 'text-gray-800' : 'text-white'
               }`}
             >
-              Your Name
+              Xingyun Chen
             </button>
           </div>
 
@@ -56,7 +56,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`inline-flex items-center justify-center p-2 rounded-md ${
+              className={`link inline-flex items-center justify-center p-2 rounded-md  ${
                 isScrolled ? 'text-gray-800' : 'text-white'
               }`}
             >
@@ -84,7 +84,7 @@ export default function Navbar() {
               <button
                 key={section.id}
                 onClick={() => scrollToSection(section.id)}
-                className={`transition-colors hover:text-primary ${
+                className={`link transition-colors hover:text-primary ${
                   isScrolled ? 'text-gray-800' : 'text-white'
                 }`}
               >
@@ -102,7 +102,7 @@ export default function Navbar() {
             <button
               key={section.id}
               onClick={() => scrollToSection(section.id)}
-              className="block w-full text-left px-3 py-2 text-gray-800 hover:text-primary"
+              className="link block w-full text-left px-3 py-2 text-gray-800 hover:text-primary"
             >
               {section.label}
             </button>
