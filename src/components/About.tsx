@@ -62,7 +62,7 @@ export default function About() {
                   {
                     icon: <BusinessIcon className="text-primary text-4xl" />,
                     title: 'Enterprise Standards',
-                    description: 'Enterprise-level solutions with best practices and security in mind'
+                    description: 'Enterprise-level solutions with best practices and security'
                   }
                 ].map((feature, index) => (
                   <Grid item xs={12} sm={6} key={index}>

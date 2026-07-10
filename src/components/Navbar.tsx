@@ -15,6 +15,7 @@ const sections = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,12 +26,45 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible[0]?.target.id) {
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      {
+        rootMargin: '-40% 0px -40% 0px',
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      }
+    );
+
+    sections.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setActiveSection(sectionId);
     setMobileOpen(false);
+  };
+
+  const linkClass = (sectionId: string, inactiveColor: string, extra = '') => {
+    const isActive = activeSection === sectionId;
+    return `link transition-colors hover:text-primary ${extra} ${
+      isActive ? 'font-bold text-primary' : `font-normal ${inactiveColor}`
+    }`;
   };
 
   return (
@@ -84,9 +118,11 @@ export default function Navbar() {
               <button
                 key={section.id}
                 onClick={() => scrollToSection(section.id)}
-                className={`link transition-colors hover:text-primary ${
+                className={linkClass(
+                  section.id,
                   isScrolled ? 'text-gray-800' : 'text-white'
-                }`}
+                )}
+                aria-current={activeSection === section.id ? 'true' : undefined}
               >
                 {section.label}
               </button>
@@ -102,7 +138,12 @@ export default function Navbar() {
             <button
               key={section.id}
               onClick={() => scrollToSection(section.id)}
-              className="link block w-full text-left px-3 py-2 text-gray-800 hover:text-primary"
+              className={linkClass(
+                section.id,
+                'text-gray-800',
+                'block w-full text-left px-3 py-2'
+              )}
+              aria-current={activeSection === section.id ? 'true' : undefined}
             >
               {section.label}
             </button>

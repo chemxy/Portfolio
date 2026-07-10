@@ -1,41 +1,75 @@
+'use client';
 
-import { Container, Typography,  } from '@mui/material';
+import { Container, Typography, useMediaQuery } from '@mui/material';
 import WorkIcon from '@mui/icons-material/Work';
-import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator} from "@mui/lab";
+import {
+  Timeline,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+  TimelineItem,
+  TimelineSeparator,
+} from '@mui/lab';
 
 const experienceData = [
   {
     year: '2022 - Present',
-    title: 'Senior Full Stack Developer',
-    company: 'Tech Company Name',
-    description: 'Leading development of enterprise web applications using React and Node.js'
+    title: 'Intermediate Developer',
+    company: 'ICBC',
+    description:
+      'Fullstack developer working on various projects, including web applications and internal tools',
   },
   {
     year: '2020 - 2022',
-    title: 'Full Stack Developer',
-    company: 'Another Company',
-    description: 'Developed and maintained multiple client projects'
+    title: 'Junior Developer',
+    company: 'ICBC',
+    description:
+      'Junior developer working on front-end development and UI/UX design for web applications',
   },
   {
     year: '2018 - 2020',
-    title: 'Junior Developer',
-    company: 'Startup Name',
-    description: 'Started career as a front-end developer working with React'
-  }
+    title: 'Application Developer',
+    company: 'ICBC',
+    description:
+      'Application developer responsible for developing and maintaining internal applications and tools',
+  },
 ];
 
 export default function Experience() {
+  const isMobile = useMediaQuery('(max-width: 767px)');
+
   return (
     <section id="experience" className="py-20 bg-white">
-      <Container maxWidth="lg">
-        <Typography 
-          variant="h2" 
+      <Container
+        maxWidth="lg"
+        className={isMobile ? '!pl-2 !pr-4' : undefined}
+      >
+        <Typography
+          variant="h2"
           className="text-4xl font-bold text-center mb-16 text-secondary"
         >
           Work Experience
         </Typography>
 
-        <Timeline position="alternate" className="animate-fadeIn">
+        <Timeline
+          position={isMobile ? 'right' : 'alternate'}
+          className="animate-fadeIn"
+          sx={
+            isMobile
+              ? {
+                  p: 0,
+                  m: 0,
+                  [`& .MuiTimelineItem-root:before`]: {
+                    flex: 0,
+                    padding: 0,
+                  },
+                  [`& .MuiTimelineContent-root`]: {
+                    pr: 0,
+                  },
+                }
+              : undefined
+          }
+        >
           {experienceData.map((item, index) => (
             <TimelineItem key={index}>
               <TimelineSeparator>
@@ -45,9 +79,7 @@ export default function Experience() {
                 {index !== experienceData.length - 1 && <TimelineConnector />}
               </TimelineSeparator>
               <TimelineContent>
-                <div className={`p-6 rounded-lg shadow-md bg-gray-50 
-                  ${index % 2 === 0 ? 'animate-slideIn' : 'animate-slideIn'}`}
-                >
+                <div className="p-6 rounded-lg shadow-md bg-gray-50 animate-slideIn">
                   <Typography variant="h6" className="text-primary font-bold">
                     {item.year}
                   </Typography>
@@ -68,4 +100,4 @@ export default function Experience() {
       </Container>
     </section>
   );
-} 
+}
