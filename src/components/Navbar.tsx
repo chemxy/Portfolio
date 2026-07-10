@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const sections = [
   { id: 'home', label: 'Home' },
@@ -12,53 +12,62 @@ const sections = [
   { id: 'contact', label: 'Contact' },
 ];
 
+const NAV_OFFSET = 96; // fixed navbar + buffer
+
+function getActiveSectionId() {
+  let current = sections[0].id;
+
+  for (const { id } of sections) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    if (el.getBoundingClientRect().top <= NAV_OFFSET) {
+      current = id;
+    }
+  }
+
+  return current;
+}
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const scrollingToRef = useRef<string | null>(null);
+  const unlockTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Don't let mid-scroll sections overwrite the clicked target
+      if (scrollingToRef.current) return;
+
+      setActiveSection(getActiveSectionId());
     };
 
-    handleScroll(); // sync with restored scroll position on load/refresh
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-        if (visible[0]?.target.id) {
-          setActiveSection(visible[0].target.id);
-        }
-      },
-      {
-        rootMargin: '-40% 0px -40% 0px',
-        threshold: [0, 0.25, 0.5, 0.75, 1],
-      }
-    );
-
-    sections.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (unlockTimerRef.current) clearTimeout(unlockTimerRef.current);
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (!element) return;
+
+    scrollingToRef.current = sectionId;
     setActiveSection(sectionId);
     setMobileOpen(false);
+
+    element.scrollIntoView({ behavior: 'smooth' });
+
+    if (unlockTimerRef.current) clearTimeout(unlockTimerRef.current);
+    unlockTimerRef.current = setTimeout(() => {
+      scrollingToRef.current = null;
+      setActiveSection(getActiveSectionId());
+    }, 900);
   };
 
   const linkClass = (sectionId: string, inactiveColor: string, extra = '') => {
@@ -153,4 +162,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-} 
+}
