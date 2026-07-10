@@ -1,14 +1,15 @@
-import { Container, Typography, Grid, Paper } from '@mui/material';
+import BusinessIcon from '@mui/icons-material/Business';
 import CodeIcon from '@mui/icons-material/Code';
 import DevicesIcon from '@mui/icons-material/Devices';
 import SpeedIcon from '@mui/icons-material/Speed';
+import { Container, Grid, Paper, Typography } from '@mui/material';
 
 export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-50">
       <Container maxWidth="lg">
-        <Typography 
-          variant="h2" 
+        <Typography
+          variant="h2"
           className="text-4xl font-bold text-center mb-16 text-secondary"
         >
           About Me
@@ -19,7 +20,7 @@ export default function About() {
           <Grid item xs={12} md={6}>
             <div className="relative">
               <img
-                src="/images/about-img.jpg"
+                src="/images/pro1.png"
                 alt="About Me"
                 className="w-full rounded-lg shadow-lg animate-slideIn"
               />
@@ -34,9 +35,10 @@ export default function About() {
                 Who am I?
               </Typography>
               <Typography variant="body1" className="text-secondary mb-6">
-                I am a passionate Full Stack Developer with expertise in building modern web applications.
-                With a strong foundation in both front-end and back-end development, I create efficient
-                and scalable solutions that solve real-world problems.
+                Full-stack developer, software developer with good self-initiatives, excellent organization and researching skill, and great attention
+                to detail. Fast learner. Problem solver. 5+ years of work experience and project experience in web development. Led and completed
+                many projects with industry standard quality. Contract instructor in Pacific Design Academy teaching web design & development in
+                React and WordPress.
               </Typography>
 
               {/* Features */}
@@ -45,17 +47,22 @@ export default function About() {
                   {
                     icon: <CodeIcon className="text-primary text-4xl" />,
                     title: 'Clean Code',
-                    description: 'Writing clean, maintainable code is my priority'
-                  },
-                  {
-                    icon: <DevicesIcon className="text-primary text-4xl" />,
-                    title: 'Responsive',
-                    description: 'My layouts work on any device, big or small'
+                    description: 'Writing clean, maintainable code'
                   },
                   {
                     icon: <SpeedIcon className="text-primary text-4xl" />,
                     title: 'Performance',
                     description: 'Fast load times and lag free interaction'
+                  },
+                  {
+                    icon: <DevicesIcon className="text-primary text-4xl" />,
+                    title: 'Responsive',
+                    description: 'Providing seamless experiences across all devices and screen sizes'
+                  },
+                  {
+                    icon: <BusinessIcon className="text-primary text-4xl" />,
+                    title: 'Enterprise Standards',
+                    description: 'Enterprise-level solutions with best practices and security in mind'
                   }
                 ].map((feature, index) => (
                   <Grid item xs={12} sm={6} key={index}>
