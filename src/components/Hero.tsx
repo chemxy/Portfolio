@@ -54,7 +54,7 @@ export default function Hero() {
               startIcon={<LinkedInIcon />}
               href="https://linkedin.com/in/chemxy"
               target="_blank"
-              className="border-white text-white hover:bg-white/10"
+              className="bg-white/92! border-white text-white hover:bg-white/70!"
             >
               LinkedIn
             </Button>
