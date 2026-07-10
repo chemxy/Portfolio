@@ -28,7 +28,7 @@ const experienceData = [
   },
   {
     year: '2018 - 2020',
-    title: 'Application Developer',
+    title: 'Intern Developer',
     company: 'ICBC',
     description:
       'Application developer responsible for developing and maintaining internal applications and tools',

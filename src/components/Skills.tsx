@@ -1,51 +1,47 @@
+import { Container, Typography, Grid } from '@mui/material';
+import skillsData from '@/data/skills.json';
 
-import { Container, Typography, Grid, LinearProgress, Box } from '@mui/material';
+type SkillCategory = {
+  category: string;
+  skills: string[];
+};
 
-const skillsData = [
-  { name: 'HTML/CSS', level: 90 },
-  { name: 'JavaScript', level: 85 },
-  { name: 'React', level: 80 },
-  { name: 'Node.js', level: 75 },
-  { name: 'TypeScript', level: 70 },
-  { name: 'Python', level: 65 },
-];
+const categories = skillsData as SkillCategory[];
 
 export default function Skills() {
   return (
     <section id="skills" className="py-20 bg-gray-50">
       <Container maxWidth="lg">
-        <Typography 
-          variant="h2" 
+        <Typography
+          variant="h2"
           className="text-4xl font-bold text-center mb-16 text-secondary"
         >
           My Skills
         </Typography>
 
+        {/* xs: 1 col · sm: 2 cols · lg: 3 cols */}
         <Grid container spacing={4}>
-          {skillsData.map((skill, index) => (
-            <Grid item xs={12} sm={6} key={index} className="animate-fadeIn">
-              <Box className="mb-4">
-                <Typography variant="h6" className="text-secondary mb-2">
-                  {skill.name}
+          {categories.map((group) => (
+            <Grid item xs={12} sm={6} lg={4} key={group.category} className="animate-fadeIn">
+              <div className="h-full rounded-xl border border-gray-200 bg-white p-6">
+                <Typography
+                  variant="h5"
+                  className="text-primary font-bold mb-4"
+                >
+                  {group.category}
                 </Typography>
-                <LinearProgress 
-                  variant="determinate" 
-                  value={skill.level} 
-                  className="h-2 rounded-full bg-gray-200"
-                  sx={{
-                    '& .MuiLinearProgress-bar': {
-                      backgroundColor: '#b636ff'
-                    }
-                  }}
-                />
-                <Typography variant="body2" className="text-right mt-1 text-secondary-light">
-                  {skill.level}%
-                </Typography>
-              </Box>
+                <ul className="list-disc list-outside space-y-1 pl-5">
+                  {group.skills.map((skill) => (
+                    <li key={skill} className="text-[16px]">
+                        {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </Grid>
           ))}
         </Grid>
       </Container>
     </section>
   );
-} 
+}

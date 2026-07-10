@@ -1,0 +1,89 @@
+[
+  {
+    "category": "Frontend",
+    "skills": [
+      "Angular",
+      "React",
+      "Next.js",
+      "Angular Material / Material UI",
+      "Tailwind CSS",
+      "Bootstrap",
+      "HTML",
+      "CSS / Sass / SCSS",
+      "WordPress",
+      "JavaScript",
+      "TypeScript"
+    ]
+  },
+  {
+    "category": "Backend",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Jakarta EE",
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "Python",
+      "C#",
+      "C",
+      "OAuth 2.0 / JWT"
+    ]
+  },
+  {
+    "category": "Database",
+    "skills": [
+      "Oracle",
+      "PostgreSQL",
+      "DB2",
+      "MongoDB"
+    ]
+  },
+  {
+    "category": "DevOps",
+    "skills": [
+      "Jenkins",
+      "GitHub Actions",
+      "Docker",
+      "Kubernetes",
+      "Microsoft Azure",
+      "AWS",
+      "Maven",
+      "npm",
+      "Git / GitHub / GitLab",
+      "Subversion",
+      "Nginx",
+      "Nexus",
+      "WAS Liberty",
+      "Postman",
+      "Splunk",
+      "Globalscape",
+      "HPSM",
+      "Mainframe"
+    ]
+  },
+  {
+    "category": "Testing",
+    "skills": [
+      "Cypress",
+      "Selenium",
+      "Cucumber",
+      "TestNG",
+      "JUnit",
+      "Jest",
+      "Jasmine"
+    ]
+  },
+  {
+    "category": "Project Related",
+    "skills": [
+      "JIRA",
+      "Confluence",
+      "Miro / Mural",
+      "MS Teams",
+      "JetBrains IDEs",
+      "Technical mentorship & code review",
+      "Agile collaboration"
+    ]
+  }
+]
