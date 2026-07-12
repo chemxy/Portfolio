@@ -96,11 +96,11 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <button
               onClick={() => scrollToSection('home')}
-              className={`text-xl font-bold ${
+              className={`uppercase text-xl font-bold ${
                 isScrolled ? 'text-gray-800' : 'text-white'
               }`}
             >
-              Xingyun Chen
+              xingyun chen
             </button>
           </div>
 

@@ -18,8 +18,8 @@ export default function Hero() {
             <Image
               src="/images/pro2.png"
               alt="Profile"
-              width={180}
-              height={180}
+              width={240}
+              height={240}
               className="rounded-full"
               priority
             />
@@ -27,19 +27,19 @@ export default function Hero() {
           
           <Typography 
             variant="h1" 
-            className="text-5xl md:text-6xl font-bold mb-4 animate-slideIn"
+            className="uppercase text-4xl md:text-5xl text-gray-100 animate-slideIn"
           >
-            Xingyun Chen
+            xingyun chen
           </Typography>
           
           <Typography 
             variant="h2" 
-            className="text-2xl md:text-3xl mb-8 text-gray-200 animate-slideIn"
+            className="capitalize text-5xl! md:text-2xl mt-4! text-gray animate-slideIn"
           >
-            Full Stack Developer
+            full stack developer
           </Typography>
 
-          <div className="flex justify-center gap-4 animate-scaleIn">
+          <div className="flex justify-center gap-4 animate-scaleIn mt-12">
             <Button
               variant="contained"
               startIcon={<GitHubIcon />}
