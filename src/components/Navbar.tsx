@@ -138,7 +138,8 @@ export default function Navbar() {
                 onClick={() => scrollToSection(section.id)}
                 className={linkClass(
                   section.id,
-                  isScrolled ? 'text-gray-800' : 'text-white'
+                  isScrolled ? 'text-gray-800' : 'text-white',
+                  'text-sm! font-bold! uppercase'
                 )}
                 aria-current={activeSection === section.id ? 'true' : undefined}
               >
@@ -151,7 +152,7 @@ export default function Navbar() {
               className={resumeLinkClass}
             >
               <DownloadIcon fontSize="small" />
-              <span>Download Resume</span>
+              <span className="text-sm!">Download Resume</span>
             </a>
           </div>
         </div>
@@ -177,7 +178,7 @@ export default function Navbar() {
           <a
             href={RESUME_HREF}
             download={RESUME_FILENAME}
-            className="link flex items-center gap-1.5 px-3 py-2 text-gray-800 hover:text-primary"
+            className="flex items-center gap-1.5 px-3 py-2 text-gray-800 hover:text-primary"
             onClick={() => setMobileOpen(false)}
           >
             <DownloadIcon fontSize="small" />

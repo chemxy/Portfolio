@@ -163,7 +163,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-gray-50 pb-60">
       <Container maxWidth="lg">
         <Typography
           variant="h2"
