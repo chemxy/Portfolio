@@ -1,0 +1,51 @@
+name: Deploy to new-gh-pages
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Create .env
+        run: |
+          echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" > .env
+          if [ -n "${{ secrets.CONTACT_TO_EMAIL }}" ]; then
+            echo "CONTACT_TO_EMAIL=${{ secrets.CONTACT_TO_EMAIL }}" >> .env
+          fi
+
+      - run: npm ci
+      - run: npm run build
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+
+      - name: Prepare deploy folder
+        run: |
+          mkdir -p deploy-tmp
+          rsync -a \
+            --exclude '.git' \
+            --exclude 'node_modules' \
+            --exclude '.next' \
+            --exclude 'deploy-tmp' \
+            --exclude '.env.local' \
+            ./ deploy-tmp/
+          # ensure .env is included even if gitignored
+          cp .env deploy-tmp/.env
+
+      - name: Deploy to new-gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: new-gh-pages
+          folder: deploy-tmp
+          clean: true
