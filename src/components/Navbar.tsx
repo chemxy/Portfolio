@@ -139,7 +139,7 @@ export default function Navbar() {
                 className={linkClass(
                   section.id,
                   isScrolled ? 'text-gray-800' : 'text-white',
-                  'text-sm! font-bold! uppercase'
+                  'text-sm! uppercase'
                 )}
                 aria-current={activeSection === section.id ? 'true' : undefined}
               >
