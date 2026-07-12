@@ -6,8 +6,6 @@ import {
   runContactGuards,
 } from '@/lib/contact-guard';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 type ContactBody = {
   name?: string;
   email?: string;
@@ -26,9 +24,16 @@ function escapeHtml(value: string) {
     .replaceAll("'", '&#39;');
 }
 
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return null;
+  return new Resend(apiKey);
+}
+
 export async function POST(request: Request) {
   try {
-    if (!process.env.RESEND_API_KEY) {
+    const resend = getResendClient();
+    if (!resend) {
       return NextResponse.json(
         { error: 'Email service is not configured.' },
         { status: 500 }
