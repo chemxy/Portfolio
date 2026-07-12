@@ -1,5 +1,10 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import {
+  getClientIp,
+  recordSuccessfulSubmit,
+  runContactGuards,
+} from '@/lib/contact-guard';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -8,6 +13,8 @@ type ContactBody = {
   email?: string;
   subject?: string;
   message?: string;
+  website?: string;
+  startedAt?: number;
 };
 
 function escapeHtml(value: string) {
@@ -33,6 +40,7 @@ export async function POST(request: Request) {
     const email = body.email?.trim() ?? '';
     const subject = body.subject?.trim() ?? '';
     const message = body.message?.trim() ?? '';
+    const website = body.website ?? '';
 
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
@@ -46,6 +54,18 @@ export async function POST(request: Request) {
         { error: 'Please provide a valid email address.' },
         { status: 400 }
       );
+    }
+
+    const fields = { name, email, subject, message };
+    const guard = runContactGuards({
+      request,
+      website,
+      startedAt: body.startedAt,
+      fields,
+    });
+
+    if (!guard.ok) {
+      return NextResponse.json({ error: guard.error }, { status: guard.status });
     }
 
     const to = process.env.CONTACT_TO_EMAIL ?? 'chemxywork@gmail.com';
@@ -71,6 +91,8 @@ export async function POST(request: Request) {
         { status: 500 }
       );
     }
+
+    recordSuccessfulSubmit(getClientIp(request), fields);
 
     return NextResponse.json({ ok: true, id: data?.id });
   } catch {

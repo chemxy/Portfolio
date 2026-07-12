@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import {
   Container,
   Typography,
@@ -19,6 +19,7 @@ type FormState = {
   email: string;
   subject: string;
   message: string;
+  website: string;
 };
 
 const initialForm: FormState = {
@@ -26,12 +27,88 @@ const initialForm: FormState = {
   email: '',
   subject: '',
   message: '',
+  website: '',
 };
+
+const SUCCESS_COOLDOWN_MS = 30_000;
+const COOLDOWN_STORAGE_KEY = 'contact-cooldown-until';
+
+/** sessionStorage is the single source of truth. Missing/unavailable/expired => 0 (no cooldown). */
+function readCooldownUntil(): number {
+  if (typeof window === 'undefined') return 0;
+  try {
+    const raw = sessionStorage.getItem(COOLDOWN_STORAGE_KEY);
+    if (!raw) return 0;
+    const parsed = Number(raw);
+    if (!Number.isFinite(parsed)) return 0;
+    if (parsed <= Date.now()) {
+      sessionStorage.removeItem(COOLDOWN_STORAGE_KEY);
+      return 0;
+    }
+    return parsed;
+  } catch {
+    return 0;
+  }
+}
+
+function writeCooldownUntil(until: number) {
+  if (typeof window === 'undefined') return;
+  try {
+    if (until <= Date.now()) {
+      sessionStorage.removeItem(COOLDOWN_STORAGE_KEY);
+      return;
+    }
+    sessionStorage.setItem(COOLDOWN_STORAGE_KEY, String(until));
+  } catch {
+    // sessionStorage unavailable — no persistence (defaults to 0s)
+  }
+}
 
 export default function Contact() {
   const [form, setForm] = useState<FormState>(initialForm);
+  const [startedAt, setStartedAt] = useState(0);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  // Render mirror only — always written after sessionStorage, read via syncFromStorage()
+  const [cooldownUntil, setCooldownUntil] = useState(0);
+  const [now, setNow] = useState(0);
+
+  const syncFromStorage = () => {
+    const stored = readCooldownUntil();
+    setCooldownUntil(stored);
+    return stored;
+  };
+
+  useEffect(() => {
+    const current = Date.now();
+    setStartedAt(current);
+    setNow(current);
+    const stored = syncFromStorage();
+    if (stored > current) {
+      setStatus('success');
+    }
+  }, []);
+
+  useEffect(() => {
+    if (cooldownUntil <= 0) return;
+
+    const tick = () => {
+      const current = Date.now();
+      setNow(current);
+      const stored = readCooldownUntil();
+      if (stored <= 0) {
+        setCooldownUntil(0);
+      }
+    };
+
+    const id = window.setInterval(tick, 1000);
+    return () => window.clearInterval(id);
+  }, [cooldownUntil]);
+
+  // sessionStorage is SoT; cooldownUntil mirror covers pre-hydrate first paint (0)
+  const effectiveCooldownUntil = readCooldownUntil() || cooldownUntil;
+  const isCoolingDown = effectiveCooldownUntil > now;
+  const isDisabled = status === 'loading' || isCoolingDown;
 
   const handleChange =
     (field: keyof FormState) =>
@@ -41,6 +118,8 @@ export default function Contact() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (status === 'loading' || readCooldownUntil() > Date.now()) return;
+
     setStatus('loading');
     setErrorMessage('');
 
@@ -48,19 +127,35 @@ export default function Contact() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+          website: form.website,
+          startedAt,
+        }),
       });
 
       const data = (await res.json()) as { error?: string };
 
       if (!res.ok) {
         setStatus('error');
-        setErrorMessage(data.error || 'Failed to send message.');
+        if (res.status === 429) {
+          setErrorMessage(data.error || 'Please wait before sending again.');
+        } else {
+          setErrorMessage(data.error || 'Failed to send message.');
+        }
         return;
       }
 
       setStatus('success');
       setForm(initialForm);
+      setStartedAt(Date.now());
+      const until = Date.now() + SUCCESS_COOLDOWN_MS;
+      writeCooldownUntil(until);
+      setCooldownUntil(readCooldownUntil());
+      setNow(Date.now());
     } catch {
       setStatus('error');
       setErrorMessage('Network error. Please try again.');
@@ -116,6 +211,23 @@ export default function Contact() {
           {/* Contact Form */}
           <Grid item xs={12} md={8}>
             <form onSubmit={handleSubmit} className="space-y-4 animate-slideIn">
+              {/* Honeypot — hidden from humans, filled by many bots */}
+              <div
+                aria-hidden="true"
+                className="absolute -left-[9999px] h-0 w-0 overflow-hidden opacity-0"
+              >
+                <label htmlFor="contact-website">Website</label>
+                <input
+                  id="contact-website"
+                  name="website"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={form.website}
+                  onChange={handleChange('website')}
+                />
+              </div>
+
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -125,7 +237,8 @@ export default function Contact() {
                     required
                     value={form.name}
                     onChange={handleChange('name')}
-                    disabled={status === 'loading'}
+                    disabled={isDisabled}
+                    inputProps={{ maxLength: 100 }}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6}>
@@ -137,7 +250,8 @@ export default function Contact() {
                     required
                     value={form.email}
                     onChange={handleChange('email')}
-                    disabled={status === 'loading'}
+                    disabled={isDisabled}
+                    inputProps={{ maxLength: 200 }}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -148,7 +262,8 @@ export default function Contact() {
                     required
                     value={form.subject}
                     onChange={handleChange('subject')}
-                    disabled={status === 'loading'}
+                    disabled={isDisabled}
+                    inputProps={{ maxLength: 200 }}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -161,7 +276,8 @@ export default function Contact() {
                     required
                     value={form.message}
                     onChange={handleChange('message')}
-                    disabled={status === 'loading'}
+                    disabled={isDisabled}
+                    inputProps={{ maxLength: 5000 }}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -180,9 +296,13 @@ export default function Contact() {
                     variant="contained"
                     size="large"
                     className="bg-primary hover:bg-primary-dark"
-                    disabled={status === 'loading'}
+                    disabled={isDisabled}
                   >
-                    {status === 'loading' ? 'Sending...' : 'Send Message'}
+                    {status === 'loading'
+                      ? 'Sending...'
+                      : isCoolingDown
+                        ? 'Please wait...'
+                        : 'Send Message'}
                   </Button>
                 </Grid>
               </Grid>
