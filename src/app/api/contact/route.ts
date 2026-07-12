@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     const resend = getResendClient();
     if (!resend) {
       return NextResponse.json(
-        { error: 'Email service is not configured.' },
+        { error: 'Email service is not ready.' },
         { status: 500 }
       );
     }

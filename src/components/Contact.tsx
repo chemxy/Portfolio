@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import {
   Container,
   Typography,
@@ -33,6 +33,15 @@ const initialForm: FormState = {
 const SUCCESS_COOLDOWN_MS = 30_000;
 const COOLDOWN_STORAGE_KEY = 'contact-cooldown-until';
 
+const cooldownListeners = new Set<() => void>();
+
+// Cached snapshot — getSnapshot must return a stable value between store updates.
+let cachedCooldownUntil = 0;
+
+function emitCooldownChange() {
+  for (const listener of cooldownListeners) listener();
+}
+
 /** sessionStorage is the single source of truth. Missing/unavailable/expired => 0 (no cooldown). */
 function readCooldownUntil(): number {
   if (typeof window === 'undefined') return 0;
@@ -51,64 +60,74 @@ function readCooldownUntil(): number {
   }
 }
 
+function syncCooldownCache() {
+  cachedCooldownUntil = readCooldownUntil();
+}
+
 function writeCooldownUntil(until: number) {
   if (typeof window === 'undefined') return;
   try {
     if (until <= Date.now()) {
       sessionStorage.removeItem(COOLDOWN_STORAGE_KEY);
-      return;
+    } else {
+      sessionStorage.setItem(COOLDOWN_STORAGE_KEY, String(until));
     }
-    sessionStorage.setItem(COOLDOWN_STORAGE_KEY, String(until));
   } catch {
     // sessionStorage unavailable — no persistence (defaults to 0s)
   }
+  syncCooldownCache();
+  emitCooldownChange();
+}
+
+function subscribeCooldown(onStoreChange: () => void) {
+  cooldownListeners.add(onStoreChange);
+  syncCooldownCache();
+  // Notify after subscribe (not sync) so the client picks up sessionStorage.
+  queueMicrotask(onStoreChange);
+
+  const id = window.setInterval(() => {
+    const prev = cachedCooldownUntil;
+    syncCooldownCache();
+    // Keep ticking while cooling down so expiry clears the UI.
+    if (cachedCooldownUntil !== prev || cachedCooldownUntil > 0) {
+      onStoreChange();
+    }
+  }, 1000);
+
+  return () => {
+    cooldownListeners.delete(onStoreChange);
+    window.clearInterval(id);
+  };
+}
+
+function getCooldownSnapshot() {
+  return cachedCooldownUntil;
+}
+
+function getServerSnapshot() {
+  return 0;
 }
 
 export default function Contact() {
+  const startedAtRef = useRef(0);
   const [form, setForm] = useState<FormState>(initialForm);
-  const [startedAt, setStartedAt] = useState(0);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
-  // Render mirror only — always written after sessionStorage, read via syncFromStorage()
-  const [cooldownUntil, setCooldownUntil] = useState(0);
-  const [now, setNow] = useState(0);
 
-  const syncFromStorage = () => {
-    const stored = readCooldownUntil();
-    setCooldownUntil(stored);
-    return stored;
-  };
-
+  // Form-open timestamp for bot timing checks (must be client-only).
   useEffect(() => {
-    const current = Date.now();
-    setStartedAt(current);
-    setNow(current);
-    const stored = syncFromStorage();
-    if (stored > current) {
-      setStatus('success');
-    }
+    startedAtRef.current = Date.now();
   }, []);
 
-  useEffect(() => {
-    if (cooldownUntil <= 0) return;
+  const cooldownUntil = useSyncExternalStore(
+    subscribeCooldown,
+    getCooldownSnapshot,
+    getServerSnapshot
+  );
 
-    const tick = () => {
-      const current = Date.now();
-      setNow(current);
-      const stored = readCooldownUntil();
-      if (stored <= 0) {
-        setCooldownUntil(0);
-      }
-    };
-
-    const id = window.setInterval(tick, 1000);
-    return () => window.clearInterval(id);
-  }, [cooldownUntil]);
-
-  // sessionStorage is SoT; cooldownUntil mirror covers pre-hydrate first paint (0)
-  const effectiveCooldownUntil = readCooldownUntil() || cooldownUntil;
-  const isCoolingDown = effectiveCooldownUntil > now;
+  const isCoolingDown = cooldownUntil > 0;
   const isDisabled = status === 'loading' || isCoolingDown;
+  const showSuccess = status === 'success' || isCoolingDown;
 
   const handleChange =
     (field: keyof FormState) =>
@@ -133,7 +152,7 @@ export default function Contact() {
           subject: form.subject,
           message: form.message,
           website: form.website,
-          startedAt,
+          startedAt: startedAtRef.current,
         }),
       });
 
@@ -151,11 +170,8 @@ export default function Contact() {
 
       setStatus('success');
       setForm(initialForm);
-      setStartedAt(Date.now());
-      const until = Date.now() + SUCCESS_COOLDOWN_MS;
-      writeCooldownUntil(until);
-      setCooldownUntil(readCooldownUntil());
-      setNow(Date.now());
+      startedAtRef.current = Date.now();
+      writeCooldownUntil(Date.now() + SUCCESS_COOLDOWN_MS);
     } catch {
       setStatus('error');
       setErrorMessage('Network error. Please try again.');
@@ -281,7 +297,7 @@ export default function Contact() {
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  {status === 'success' && (
+                  {showSuccess && (
                     <Alert severity="success" className="mb-4">
                       Message sent successfully. I will get back to you soon.
                     </Alert>
