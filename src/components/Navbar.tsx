@@ -1,6 +1,10 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import DownloadIcon from '@mui/icons-material/Download';
+
+const RESUME_HREF = '/doc/Resume_Xingyun_Chen_Web_Dev_2026.pdf';
+const RESUME_FILENAME = 'Resume_Xingyun_Chen_Web_Dev_2026.pdf';
 
 const sections = [
   { id: 'home', label: 'Home' },
@@ -77,6 +81,10 @@ export default function Navbar() {
     }`;
   };
 
+  const resumeLinkClass = `link inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-primary ${
+    isScrolled ? 'text-gray-800' : 'text-white'
+  }`;
+
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -137,6 +145,14 @@ export default function Navbar() {
                 {section.label}
               </button>
             ))}
+            <a
+              href={RESUME_HREF}
+              download={RESUME_FILENAME}
+              className={resumeLinkClass}
+            >
+              <DownloadIcon fontSize="small" />
+              <span>Download Resume</span>
+            </a>
           </div>
         </div>
       </div>
@@ -158,6 +174,15 @@ export default function Navbar() {
               {section.label}
             </button>
           ))}
+          <a
+            href={RESUME_HREF}
+            download={RESUME_FILENAME}
+            className="link flex items-center gap-1.5 px-3 py-2 text-gray-800 hover:text-primary"
+            onClick={() => setMobileOpen(false)}
+          >
+            <DownloadIcon fontSize="small" />
+            <span>Download Resume</span>
+          </a>
         </div>
       </div>
     </nav>
